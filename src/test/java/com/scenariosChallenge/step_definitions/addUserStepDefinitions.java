@@ -1,0 +1,146 @@
+package com.scenariosChallenge.step_definitions;
+
+import com.scenariosChallenge.pages.AddUserPage;
+import com.scenariosChallenge.utilities.ConfigurationReader;
+import com.scenariosChallenge.utilities.Driver;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import static junit.framework.TestCase.assertEquals;
+
+public class addUserStepDefinitions {
+
+    AddUserPage addUserPage = new AddUserPage();
+    String expected = "nourelkawafi";
+
+
+
+    @Given("user is on the webTable page")
+    public void user_is_on_the_web_table_page() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("urlWeb"));
+        System.out.println("User is on the login page.");
+
+    }
+
+    @When("User clicks Add User button")
+    public void user_clicks_add_user_button() {
+        addUserPage.addUserButton.click();
+
+    }
+
+    @Then("user should see the add user form")
+    public void user_should_see_the_add_user_form() {
+
+        String actualHeaderText = addUserPage.addUserText.getText();
+        assertEquals("Header did not match.", actualHeaderText, "Add User");
+
+    }
+
+    @And("user enters First name")
+    public void user_enters_first_name() {
+        addUserPage.firstName.sendKeys(expected);
+
+    }
+
+    @And("user enters Last name")
+    public void user_enters_last_name() {
+        addUserPage.lastName.sendKeys("El Kawafi");
+
+    }
+
+    @And("user enters user Name")
+    public void user_enters_user_name() {
+        addUserPage.userName.sendKeys("nourelkawafi");
+
+    }
+
+    @And("user enters password")
+    public void user_enters_password() {
+        addUserPage.passWord.sendKeys("123456");
+
+    }
+
+    @And("user  choose from customerCompany radio button")// the function
+    public void user_choose_from_customer_company_radio_button() {
+        addUserPage.customerCompanyInput.click();
+
+        boolean select = addUserPage.customerCompanyInput.isSelected();
+        System.out.println("Element selected is :" + select);
+
+
+    }
+
+
+    @And("user  choose from Roles list")
+    public void user_chose_from_roles_list() {
+
+        Select select = new Select(addUserPage.roleId);
+        select.selectByVisibleText("Admin");
+
+    }
+
+    @And("user enters E-mail")
+    public void user_enters_e_mail() {
+        addUserPage.e_mail.sendKeys("noka_nour@yahoo.com");
+
+    }
+
+    @And("user enters cell Phone number")
+    public void user_enters_cell_phone_number() {
+
+        addUserPage.cellPhone.sendKeys("222222222");
+
+    }
+
+    @Then("user can click on save button")
+    public void user_can_click_on_save_button() {
+        addUserPage.saveButton.click();
+
+    }
+
+    @Then("user can see added user")
+    public void user_can_see_added_user() {
+
+
+        List<WebElement> usernames = addUserPage.userNames;
+        List<String> usernamesStr=usernames.stream().map(WebElement::getText).collect(Collectors.toList());
+
+        for (String each : usernamesStr) {
+            if(each.contentEquals(expected)){
+                Assert.assertTrue(each.contentEquals(expected));
+                break;
+            }
+        }
+
+
+        // System.out.println("User added Successfully :  "+actualText);
+
+        //List<WebElement> webElementsAsString = new ArrayList<>();
+
+        //    webElementsAsString = addUserPage.listOfNames;
+
+//        for(int i = 0 ; i<= addUserPage.listOfNames.size(); i++) {
+//            System.out.println("each name = " + addUserPage.listOfNames.get(i).getText());
+//        }
+
+        // for (WebElement each : addUserPage.listOfNames) {
+        //System.out.println("each name = " + each.getText());
+
+        //Assert.assertEquals("User was not added to the table", expectedText,each);
+
+
+    }
+
+
+}
+
+
+
