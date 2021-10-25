@@ -39,7 +39,7 @@ codes such as browser utils.
 cucumber library that will store my failed cucumber feature files. I also have
 failedScenario runner class which has the location of failed scenarios (rerun.txt).
 
-###Step by step how to create a scenario and implement it
+# Step by step how to create a scenario and implement it
 
 1- Create a feature file.feature --> Extension must be .feature
 2- I Use Feature: keyword to pass the User Story.
