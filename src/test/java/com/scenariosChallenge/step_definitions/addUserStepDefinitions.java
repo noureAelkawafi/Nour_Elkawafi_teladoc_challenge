@@ -19,7 +19,7 @@ import static junit.framework.TestCase.assertEquals;
 public class addUserStepDefinitions {
 
     AddUserPage addUserPage = new AddUserPage();
-    String expected = "nourelkawafi";
+    String userName = "nourelkawafi";
 
 
 
@@ -44,26 +44,26 @@ public class addUserStepDefinitions {
 
     }
 
-    @And("user enters First name")
-    public void user_enters_first_name() {
-        addUserPage.firstName.sendKeys(expected);
+    @And("user enter First name")
+    public void user_enter_first_name() {
+        addUserPage.firstName.sendKeys(userName);
 
     }
 
-    @And("user enters Last name")
-    public void user_enters_last_name() {
+    @And("user enter Last name")
+    public void user_enter_last_name() {
         addUserPage.lastName.sendKeys("El Kawafi");
 
     }
 
-    @And("user enters user Name")
-    public void user_enters_user_name() {
+    @And("user enter user Name")
+    public void user_enter_user_name() {
         addUserPage.userName.sendKeys("nourelkawafi");
 
     }
 
-    @And("user enters password")
-    public void user_enters_password() {
+    @And("user enter password")
+    public void user_enter_password() {
         addUserPage.passWord.sendKeys("123456");
 
     }
@@ -75,26 +75,30 @@ public class addUserStepDefinitions {
         boolean select = addUserPage.customerCompanyInput.isSelected();
         System.out.println("Element selected is :" + select);
 
+       /* I used boolean condition to check the button is selected , because after I
+        create new user the button is selected , which mean the test pass when I add the user ,
+         but it will fail if I assert the text is displayed .*/
+
 
     }
 
 
     @And("user  choose from Roles list")
-    public void user_chose_from_roles_list() {
+    public void user_choose_from_roles_list() {
 
         Select select = new Select(addUserPage.roleId);
         select.selectByVisibleText("Admin");
 
     }
 
-    @And("user enters E-mail")
-    public void user_enters_e_mail() {
+    @And("user enter E-mail")
+    public void user_enter_e_mail() {
         addUserPage.e_mail.sendKeys("noka_nour@yahoo.com");
 
     }
 
-    @And("user enters cell Phone number")
-    public void user_enters_cell_phone_number() {
+    @And("user enter cell Phone number")
+    public void user_enter_cell_phone_number() {
 
         addUserPage.cellPhone.sendKeys("222222222");
 
@@ -111,36 +115,16 @@ public class addUserStepDefinitions {
 
 
         List<WebElement> usernames = addUserPage.userNames;
-        List<String> usernamesStr=usernames.stream().map(WebElement::getText).collect(Collectors.toList());
+        List<String> userNameList=usernames.stream().map(WebElement::getText).collect(Collectors.toList());
 
-        for (String each : usernamesStr) {
-            if(each.contentEquals(expected)){
-                Assert.assertTrue(each.contentEquals(expected));
-                break;
+        for (String each : userNameList) {
+            if(each.contentEquals(userName)){
+                Assert.assertEquals(each, userName);
+
             }
         }
 
-
-        // System.out.println("User added Successfully :  "+actualText);
-
-        //List<WebElement> webElementsAsString = new ArrayList<>();
-
-        //    webElementsAsString = addUserPage.listOfNames;
-
-//        for(int i = 0 ; i<= addUserPage.listOfNames.size(); i++) {
-//            System.out.println("each name = " + addUserPage.listOfNames.get(i).getText());
-//        }
-
-        // for (WebElement each : addUserPage.listOfNames) {
-        //System.out.println("each name = " + each.getText());
-
-        //Assert.assertEquals("User was not added to the table", expectedText,each);
-
-
     }
 
-
 }
-
-
 

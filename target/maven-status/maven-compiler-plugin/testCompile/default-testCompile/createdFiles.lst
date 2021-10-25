@@ -1,0 +1,9 @@
+com\scenariosChallenge\utilities\BrowserUtils.class
+com\scenariosChallenge\utilities\Driver.class
+com\scenariosChallenge\runners\FailedTestRunner.class
+com\scenariosChallenge\runners\CukesRunner.class
+com\scenariosChallenge\pages\AddUserPage.class
+com\scenariosChallenge\step_definitions\addUserStepDefinitions.class
+com\scenariosChallenge\step_definitions\deleteUserStepDefinitions.class
+com\scenariosChallenge\utilities\ConfigurationReader.class
+com\scenariosChallenge\pages\DeleteUserPage.class
