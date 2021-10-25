@@ -1,0 +1,257 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4068000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is on the webTable page",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_is_on_the_web_table_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-25T03:43:44.380Z",
+        "line": 13,
+        "name": "Add a user to the table",
+        "description": "",
+        "id": "engineer-candidate;add-a-user-to-the-table",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 59000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User clicks Add User button",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_clicks_add_user_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 32000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user should see the add user form",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_should_see_the_add_user_form()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enter First name",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_enter_first_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enter Last name",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_enter_last_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enter user Name",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_enter_user_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enter password",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_enter_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user  choose from customerCompany radio button",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_choose_from_customer_company_radio_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user  choose from Roles list",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_choose_from_roles_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 87000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user enter E-mail",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_enter_e_mail()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user enter cell Phone number",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_enter_cell_phone_number()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42000000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user can click on save button",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_can_click_on_save_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 75000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user can see added user",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_can_see_added_user()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 579000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is on the webTable page",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.addUserStepDefinitions.user_is_on_the_web_table_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-25T03:43:49.372Z",
+        "line": 32,
+        "name": "Delete user User Name: novak",
+        "description": "",
+        "id": "engineer-candidate;delete-user-user-name:-novak",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user click on the delete button",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.deleteUserStepDefinitions.user_click_on_the_delete_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 58000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user click on the ok button",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.deleteUserStepDefinitions.user_click_on_the_ok_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58000000,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user should see user has been delete",
+            "match": {
+              "location": "com.scenariosChallenge.step_definitions.deleteUserStepDefinitions.user_should_see_user_has_been_delete()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Engineer Candidate",
+    "description": "  As a user, I should be able to automate the way2automation web application,\n  and I can Add a user, and delete a user .",
+    "id": "engineer-candidate",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/engrCandidate.feature",
+    "tags": []
+  }
+]

@@ -11,7 +11,8 @@ public class Driver {
 
     private Driver() {
     }
-
+//Singleton Pattern: I created a Driver class in a utility package that uses the
+//singleton pattern to create and use only one webdriver.
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>() ;
 
     public static  WebDriver getDriver() {

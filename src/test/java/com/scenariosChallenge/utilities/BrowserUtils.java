@@ -1,30 +1,9 @@
 package com.scenariosChallenge.utilities;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class BrowserUtils {
 
-/*
-    This method accepts List<WebElement> and returns List<Strings>
-     */
-
-    public static List<String> getElementsText(List<WebElement> webElementList){
-
-        //Placeholder empty list of web element
-        List<String> webElementsAsString = new ArrayList<>();
-
-        //Looping through list of web elements and storing text into placeholder list
-        for (WebElement each : webElementList) {
-            webElementsAsString.add(each.getText());
-        }
-
-        //returning final List<String>
-        return webElementsAsString;
-    }
 
 
 

@@ -22,8 +22,7 @@ public class DeleteUserPage {
     @FindBy(xpath = "//button[@class='btn ng-scope ng-binding btn-primary']")
     public WebElement okButton;
 
-    @FindBy(xpath ="//td[.='novak']" )
-    public WebElement  checkUser;
+
 
     @FindBy (xpath = "//table[@class='smart-table table table-striped']/tbody/tr/td[3]")
     public List<WebElement> userNames;

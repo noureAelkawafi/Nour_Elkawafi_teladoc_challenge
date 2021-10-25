@@ -12,6 +12,9 @@ public class AddUserPage {
 
     public AddUserPage(){
 
+        //I used Page Factory Design Pattern to instantiate the webElement using
+        //@FindBy annotation which makes it easier and convenient.
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -40,10 +43,6 @@ public class AddUserPage {
     @FindBy(name = "RoleId")
     public WebElement roleId;
 
-    @FindBy(xpath = "//option[@value='2']")
-    public WebElement adminChoice;
-
-
     @FindBy( name = "Email")
     public WebElement e_mail;
 
@@ -61,27 +60,6 @@ public class AddUserPage {
 
     @FindBy (xpath = "//table[@class='smart-table table table-striped']/tbody/tr/td[3]")
     public List<WebElement> userNames;
-
-
-    //  @FindBy(xpath ="(//table[@class='smart-table table table-striped']//tr/td[6]" )
-  //  public List<WebElement> listOfNames;
-
-
-
-
-
-
-
-
-
-
-//driver.findElement(By.name("q")).sendKeys("apple" + Keys.ENTER););
-
-
-
-    //        Select role = new Select(userWebtablesPage.role);
-    //           role.selectByVisibleText("Admin");
-
 
 
 }
